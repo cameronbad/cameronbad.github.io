@@ -5,3 +5,15 @@
 .min-100vh {
     min-height: 100vh;
 }
+
+.about-card {
+    min-width: 325px;
+}
+
+@media(max-width: 475px) {
+    #about-con {
+        position: static !important;
+        transform: none !important;
+        margin-top: 1rem !important;
+    }
+}
