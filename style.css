@@ -22,7 +22,7 @@
     overflow: hidden;
     max-width: 1920px;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 56px);
     position: relative;
     margin: auto;
     background-color: white;
@@ -40,6 +40,8 @@ div:has(.skills-box) {
     display: flex;
     position: absolute;
     background-color: lightgrey;
+    left: -10vw;
+
     > * {
         flex: 0 0 100%;
     }
@@ -78,18 +80,23 @@ div:has(.skills-box) {
 
 /* Positioning */
 #skills-car-1 {
-    top: 200px;
-
+    top: 100px;
+    transform-origin: left;
+    rotate: 10deg;
 }
 #skills-car-2 {
-    top: 400px;
+    top: calc(50vh - 28px);
+    transform-origin: center;
+    rotate: -25deg;
 
     > .group {
         animation-delay: -10s;
     }
 }
 #skills-car-3 {
-    top: 600px;
+    bottom: 100px;
+    transform-origin: right;
+    rotate: 10deg;
 
     > .group {
         animation-delay: -20s;
