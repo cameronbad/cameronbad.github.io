@@ -132,13 +132,14 @@ div:has(.skills-box) {
     width: 100vw;
 }
 
-.scroll-icon {
+.down-icon {
     bottom: 10px;
     left: calc(50vw - 13.3px);
-    animation: scrollicon 1s linear infinite;
+    cursor: pointer;
+    animation: downicon 1s linear infinite;
 }
 
-@keyframes scrollicon {
+@keyframes downicon {
     0% {
         bottom: 10px;
     }
@@ -147,5 +148,24 @@ div:has(.skills-box) {
     }
     100% {
         bottom: 10px;
+    }
+}
+
+.up-icon {
+    top: 10px;
+    left: calc(50vw - 13.3px);
+    cursor: pointer;
+    animation: upicon 1s linear infinite;
+}
+
+@keyframes upicon {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: 20px;
+    }
+    100% {
+        top: 10px;
     }
 }

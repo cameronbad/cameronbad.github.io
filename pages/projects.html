@@ -1,13 +1,76 @@
 <div class="proj-container">
     <div class="proj-box position-relative">
-        <div class="container">
-            Placeholder
+        <div class="container pt-3">
+            <div class="row p-1">
+                <div class="col">Image</div>
+                <div class="col">
+                    <h4>EduTest</h4>
+                    <p></p>
+                </div>
+            </div>
         </div>
-        <div class="scroll-icon position-absolute">
+        <div class="down-icon position-absolute">
             <i class="fa-solid fa-angles-down fs-2"></i>
         </div>
     </div>
-    <div class="proj-box"></div>
-    <div class="proj-box"></div>
-    <div class="proj-box"></div>
+    <div class="proj-box position-relative">
+        <div class="up-icon position-absolute">
+            <i class="fa-solid fa-angles-up fs-2"></i>
+        </div>
+        <div class="container pt-5">
+            <div class="row p-1">
+                <div class="col">Image</div>
+                <div class="col">
+                    <h4>Morsecode Translator</h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="down-icon position-absolute">
+            <i class="fa-solid fa-angles-down fs-2"></i>
+        </div>
+    </div>
+    <div class="proj-box position-relative">
+        <div class="up-icon position-absolute">
+            <i class="fa-solid fa-angles-up fs-2"></i>
+        </div>
+        <div class="container pt-5">
+            <div class="row p-1">
+                <div class="col">Image</div>
+                <div class="col">
+                    <h4>WordPress Theme</h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="down-icon position-absolute">
+            <i class="fa-solid fa-angles-down fs-2"></i>
+        </div>
+    </div>
+    <div class="proj-box position-relative">
+        <div class="up-icon position-absolute">
+            <i class="fa-solid fa-angles-up fs-2"></i>
+        </div>
+        <div class="container pt-5">
+            <div class="row p-1">
+                <div class="col">Image</div>
+                <div class="col">
+                    <h4>Figma Prototyping</h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- Make down and up arrows navigate the scroll using jquery-->
+<script>
+    //Up scroll
+    $(document).on("click", ".up-icon", function() {
+        $(this).closest(".proj-box").prev(".proj-box")[0].scrollIntoView({ behavior: "smooth"});
+    });
+
+    //Down scroll
+    $(document).on("click", ".down-icon", function() {
+        $(this).closest(".proj-box").next(".proj-box")[0].scrollIntoView({ behavior: "smooth"});
+    });
+</script>
