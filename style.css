@@ -36,6 +36,7 @@ div:has(.skills-box) {
     margin: 0 auto;
     padding: 20px 0;
     width: 120vw;
+    max-width: 2304px;
     overflow: hidden;
     display: flex;
     position: absolute;
@@ -85,7 +86,7 @@ div:has(.skills-box) {
     rotate: 10deg;
 }
 #skills-car-2 {
-    top: calc(50vh - 28px);
+    top: calc(50vh - 40px);
     transform-origin: center;
     rotate: -25deg;
 
@@ -100,6 +101,14 @@ div:has(.skills-box) {
 
     > .group {
         animation-delay: -20s;
+    }
+}
+@media(min-width: 190vh) {
+    #skills-car-1 {
+        rotate: 5deg;
+    }
+    #skills-car-3 {
+        rotate: 5deg;
     }
 }
 
