@@ -1,6 +1,7 @@
 :root {
     --rotation-time: 10s;
     --star-distance: 20px;
+    --star-delay: 0s;
 }
 
 main {
@@ -201,6 +202,7 @@ div:has(.skills-box) {
 .star {
     position: relative;
     animation: rotation var(--rotation-time) infinite linear;
+    animation-delay: var(--star-delay);
 }
 
 /* Styling */

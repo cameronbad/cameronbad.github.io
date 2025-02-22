@@ -40,9 +40,66 @@
         </div>
         <div class="background-box"> <!-- For background objects and visuals -->
             <div class="star-orbit">
-                <div class="star">
-                    <div></div>
-                </div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
+                <div class="star"><div></div></div>
             </div>
         </div>
     </main>
@@ -63,6 +120,24 @@
                     $('.content-box').html(data);
                 }
             })
+        });
+
+        //Randomise stars
+        $(".star").each(function() {
+            var time = Math.ceil(Math.random() * 60);
+            if (time < 3) {
+                time = 3;
+            }
+
+            let width = screen.width / 2;
+            var distance = Math.ceil(Math.random() * width + 40);
+
+            var delay = Math.ceil(Math.random() * time);
+
+
+            this.style.setProperty('--rotation-time', time + 's');
+            this.style.setProperty('--star-distance', distance +'px');
+            this.style.setProperty('--star-delay', '-' + delay + 's');
         });
     </script>
 </body>
