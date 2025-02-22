@@ -1,3 +1,12 @@
+:root {
+    --rotation-time: 10s;
+    --star-distance: 20px;
+}
+
+main {
+    background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
+}
+
 .container-home {
     width: 325px;
 }
@@ -25,7 +34,7 @@
     height: calc(100vh - 56px);
     position: relative;
     margin: auto;
-    background-color: white;
+    background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
 }
 
 div:has(.skills-box) {
@@ -169,3 +178,50 @@ div:has(.skills-box) {
         top: 10px;
     }
 }
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-200deg);
+    }
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+/* Location of orbit centering */
+.star-orbit {
+    position: fixed;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 50vw;
+}
+
+/* Animation */
+.star {
+    position: relative;
+    animation: rotation var(--rotation-time) infinite linear;
+}
+
+/* Styling */
+.star > div {
+    background-color: white;
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius: 100%;
+
+    left: var(--star-distance);
+    top: 0;
+}
+.star > div:before {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+    content: '';
+    width: 5px;
+    height: 20px;
+    top: -15px;
+    position: absolute;
+    border-radius: 100%;
+}
+
