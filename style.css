@@ -1,3 +1,27 @@
+:root {
+    --rotation-time: 10s;
+    --star-distance: 20px;
+    --star-delay: 0s;
+}
+
+main {
+    background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
+}
+
+.content-box {
+    position: relative;
+    z-index: 1;
+    height: calc(100vh - 56px);
+    width: 100%;
+}
+
+.background-box {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .container-home {
     width: 325px;
 }
@@ -25,11 +49,19 @@
     height: calc(100vh - 56px);
     position: relative;
     margin: auto;
-    background-color: white;
+    background: transparent;
+    
 }
 
-div:has(.skills-box) {
-    background-color: lightgrey;
+@media(min-width: 1920px) {
+    .skills-box {
+        border: solid lightgrey;
+        border-left-width: calc((100vw - 1920px) / 2);
+        border-right-width: calc((100vw - 1920px) / 2);
+        border-top-width: 0;
+        border-bottom-width: 0;
+        box-sizing: content-box;
+    }
 }
 
 .carousel {
@@ -169,3 +201,51 @@ div:has(.skills-box) {
         top: 10px;
     }
 }
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-200deg);
+    }
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+/* Location of orbit centering */
+.star-orbit {
+    position: fixed;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 50vw;
+}
+
+/* Animation */
+.star {
+    position: relative;
+    animation: rotation var(--rotation-time) infinite linear;
+    animation-delay: var(--star-delay);
+}
+
+/* Styling */
+.star > div {
+    background-color: white;
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius: 100%;
+
+    left: var(--star-distance);
+    top: 0;
+}
+.star > div:before {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+    content: '';
+    width: 5px;
+    height: 20px;
+    top: -15px;
+    position: absolute;
+    border-radius: 100%;
+}
+
