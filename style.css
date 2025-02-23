@@ -8,6 +8,20 @@ main {
     background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
 }
 
+.content-box {
+    position: relative;
+    z-index: 1;
+    height: calc(100vh - 56px);
+    width: 100%;
+}
+
+.background-box {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .container-home {
     width: 325px;
 }
@@ -35,11 +49,19 @@ main {
     height: calc(100vh - 56px);
     position: relative;
     margin: auto;
-    background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
+    background: transparent;
+    
 }
 
-div:has(.skills-box) {
-    background-color: lightgrey;
+@media(min-width: 1920px) {
+    .skills-box {
+        border: solid lightgrey;
+        border-left-width: calc((100vw - 1920px) / 2);
+        border-right-width: calc((100vw - 1920px) / 2);
+        border-top-width: 0;
+        border-bottom-width: 0;
+        box-sizing: content-box;
+    }
 }
 
 .carousel {
