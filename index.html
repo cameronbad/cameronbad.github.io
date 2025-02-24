@@ -130,7 +130,13 @@
             }
 
             let width = screen.width / 2;
-            var distance = Math.ceil(Math.random() * width + 40);
+            let height = screen.height - 96;
+            if (height > width) {
+                var distance = Math.ceil(Math.random() * height + 40);
+            } else {
+                var distance = Math.ceil(Math.random() * width + 40);
+            }
+
 
             var delay = Math.ceil(Math.random() * time);
 
