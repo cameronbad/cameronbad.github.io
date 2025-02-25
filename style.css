@@ -205,7 +205,7 @@ main {
 @media(max-width: 575px) {
     .img-fluid {
         display: none;
-        /* Removes images to avoid mobile issues, a better solution is likely possible but cannot think of anythign at the moment */
+        /* Removes images to avoid mobile issues, a better solution is likely possible but cannot think of anything at the moment */
     }
 }
 
