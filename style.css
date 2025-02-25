@@ -202,6 +202,13 @@ main {
     width: 100vw;
 }
 
+@media(max-width: 575px) {
+    .img-fluid {
+        display: none;
+        /* Removes images to avoid mobile issues, a better solution is likely possible but cannot think of anything at the moment */
+    }
+}
+
 .proj-btn {
     position: relative;
     border: 2px solid #04D9FF;
