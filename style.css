@@ -4,10 +4,6 @@
     --star-delay: 0s;
 }
 
-main {
-    background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
-}
-
 .primary-text {
     color: #04D9FF;
 }
@@ -49,10 +45,11 @@ main {
 }
 
 .background-box {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100%;
     width: 100%;
+    background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
 }
 
 .container-home {
